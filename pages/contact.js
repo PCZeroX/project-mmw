@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 const Contact = () => {
 	return (
@@ -59,12 +60,12 @@ const Contact = () => {
 				</div>
 			</div>
 
-			<div className="absolute top-0 left-0 -z-10 opacity-20 min-h-full w-full bg-cover bg-center bg-no-repeat">
-				<img
-					// src="/img/banners/banner01.jpg"
+			<div className="absolute top-0 left-0 -z-10 opacity-20 w-full h-full">
+				<Image
 					src="/img/background/bg01.jpg"
-					alt="Banner 01"
-					className="absolute w-full h-full top-0"
+					alt="Background 01"
+					layout="fill"
+					className="object-cover object-center"
 				/>
 			</div>
 		</>

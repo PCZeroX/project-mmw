@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const infoCard = [
 	{
 		title: "History",
@@ -19,29 +21,29 @@ const infoCard = [
 	},
 ];
 
-let content = (
-	<div className="py-12 space-y-8">
-		<h2 className="text-base md:text-2xl text-center uppercase font-medium tracking-wide">
-			Precision + Details Oriented + Great Customer Service
-		</h2>
-		<div className="flex justify-center items-center">
-			<div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4">
-				{infoCard.map((item) => (
-					<div key={item.title} className="py-4 space-y-2">
-						<img
-							src={item.src}
-							alt={item.title}
-							className="w-full"
-						/>
-						<h3 className="text-center font-semibold xl:text-xl tracking-wide">
-							{item.title}
-						</h3>
-					</div>
-				))}
-			</div>
-		</div>
-	</div>
-);
+// let content = (
+// 	<div className="py-12 space-y-8">
+// 		<h2 className="text-base md:text-2xl text-center uppercase font-medium tracking-wide">
+// 			Precision + Details Oriented + Great Customer Service
+// 		</h2>
+// 		<div className="flex justify-center items-center">
+// 			<div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-4">
+// 				{infoCard.map((item) => (
+// 					<div key={item.title} className="py-4 space-y-2">
+// 						<img
+// 							src={item.src}
+// 							alt={item.title}
+// 							className="w-full"
+// 						/>
+// 						<h3 className="text-center font-semibold xl:text-xl tracking-wide">
+// 							{item.title}
+// 						</h3>
+// 					</div>
+// 				))}
+// 			</div>
+// 		</div>
+// 	</div>
+// );
 
 const Details = () => {
 	return (
@@ -52,11 +54,16 @@ const Details = () => {
 			</h2>
 			<div className="grid lg:grid-cols-3 mx-4 gap-4">
 				{infoCard.map((item) => (
-					<div key={item.title} className="space-y-2">
-						<img
+					<div
+						key={item.title}
+						className="space-y-2 mx-auto"
+					>
+						<Image
 							src={item.src}
 							alt={item.title}
-							// className="w-full"
+							width={640}
+							height={320}
+							className="object-cover object-center"
 						/>
 						<h3 className="text-center font-semibold xl:text-xl tracking-wide">
 							{item.title}

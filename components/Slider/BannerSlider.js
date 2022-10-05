@@ -6,6 +6,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import Image from "next/image";
 
 const banners = [
 	{
@@ -58,9 +59,10 @@ const BannerSlider = () => {
 			>
 				{banners.map((banner, index) => (
 					<SwiperSlide key={index}>
-						<img
+						<Image
 							src={banner.src}
 							alt={banner.name}
+							layout="fill"
 							className={`w-full h-full object-cover object-center`}
 						/>
 					</SwiperSlide>

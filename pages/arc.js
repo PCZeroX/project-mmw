@@ -8,6 +8,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import Image from "next/image";
 
 const arcImages = [
 	{
@@ -30,7 +31,7 @@ const arcImages = [
 
 const Arc = () => {
 	return (
-		<div className="max-w-7xl mx-auto py-8">
+		<div className="max-w-7xl mx-auto">
 			<Head>
 				<title>Metalmania - Arc</title>
 			</Head>
@@ -38,9 +39,15 @@ const Arc = () => {
 			<h1 className="text-center font-bold text-4xl">
 				Arc
 			</h1>
-			<Swiper>
-				<SwiperSlide></SwiperSlide>
-			</Swiper>
+
+			<div className="absolute top-0 left-0 -z-10 opacity-20 w-full h-full">
+				<Image
+					src="/img/background/bg06.jpg"
+					alt="Banner 06"
+					layout="fill"
+					className="object-cover object-center"
+				/>
+			</div>
 		</div>
 	);
 };
