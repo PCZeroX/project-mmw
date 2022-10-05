@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+label {
+	@apply select-none;
+}
+
+.menu-button {
+	@apply w-6
+		h-6
+		flex
+		justify-around
+		items-center
+		flex-col
+		outline-none
+		transition-[opacity]
+		hover:opacity-80
+		duration-300;
+}
+
+.menu-button .line {
+	@apply w-6 h-[3px] bg-white rounded-sm
+		transition-[transform,opacity]
+		duration-[inherit]
+		ease-in;
+}
+
+/* .active-menu-item:nth-of-type(1) {
+	@apply mdTo:delay-[560ms];
+}
+
+.active-menu-item:nth-of-type(2) {
+	@apply mdTo:delay-[490ms];
+}
+
+.active-menu-item:nth-of-type(3) {
+	@apply mdTo:delay-[420ms];
+} */
+
+.not-active-menu-item:nth-of-type(1) {
+	@apply mdTo:delay-[70ms];
+}
+
+.not-active-menu-item:nth-of-type(2) {
+	@apply mdTo:delay-[140ms];
+}
+
+.not-active-menu-item:nth-of-type(3) {
+	@apply mdTo:delay-[210ms];
+}
+
+.main-overlay {
+	@apply fixed
+
+		mdTo:top-0
+		mdTo:left-0
+		mdTo:w-full
+		mdTo:h-full
+
+		mdTo:z-10
+
+		mdTo:transition-[background-color]
+		mdTo:duration-1000
+		mdTo:delay-100;
+}
