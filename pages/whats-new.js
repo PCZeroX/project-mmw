@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Image from "next/image";
 
-const arcImages = [
+const whatsNewImages = [
 	{
 		name: "Banner 1",
 		src: "/img/banners/banner01.jpg",
@@ -29,20 +29,20 @@ const arcImages = [
 	},
 ];
 
-const Arc = () => {
+const WhatsNew = () => {
 	return (
 		<div className="max-w-7xl mx-auto">
 			<Head>
-				<title>Metalmania - Arc</title>
+				<title>Metalmania - What's New</title>
 			</Head>
 
 			<h1 className="text-center font-bold text-4xl">
-				Arc
+				What's New
 			</h1>
 
 			<div className="absolute top-0 left-0 -z-10 opacity-20 w-full h-full">
 				<Image
-					src="/img/background/bg07.jpg"
+					src="/img/background/bg05.jpg"
 					alt="Banner 06"
 					layout="fill"
 					className="object-cover object-center"
@@ -52,4 +52,4 @@ const Arc = () => {
 	);
 };
 
-export default Arc;
+export default WhatsNew;

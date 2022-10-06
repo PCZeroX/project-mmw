@@ -9,9 +9,11 @@ import {
 
 const NavLinks = [
 	{ name: "Arc", href: "/arc" },
+	{ name: "What's New", href: "/whats-new" },
 	{ name: "Residential", href: "/residential" },
 	{ name: "Commercial", href: "/commercial" },
-	{ name: "Contact", href: "/contact" },
+	{ name: "Architecture", href: "/architecture" },
+	{ name: "Contact Us", href: "/contact-us" },
 ];
 
 const Header = () => {
@@ -44,7 +46,7 @@ const Header = () => {
 
 		return () =>
 			window.removeEventListener("scroll", handleScrollY);
-	}, [prevScrollPosY]);
+	}, [prevScrollPosY, router.pathname]);
 
 	return (
 		<>
@@ -81,12 +83,6 @@ const Header = () => {
 								MetalMania
 							</a>
 						</Link>
-
-						{/* <ul className="flex mdTo:hidden gap-4 text-sm">
-							<li>(718) 567-7015</li>
-							<li>info@mm-works.com</li>
-							<li>metalmania@gmail.com</li>
-						</ul> */}
 
 						<ul className="flex items-center gap-4 lg:gap-12">
 							<li>

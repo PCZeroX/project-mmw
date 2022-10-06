@@ -6,11 +6,11 @@ const Contact = () => {
 		<>
 			<div className="max-w-7xl mx-auto space-y-8 py-8">
 				<Head>
-					<title>Metalmania - Contact</title>
+					<title>Metalmania - Contact Us</title>
 				</Head>
 
 				<h1 className="text-center font-bold text-4xl">
-					Contact
+					Contact Us
 				</h1>
 
 				<div className="mx-4 grid lg:grid-cols-2 gap-4">

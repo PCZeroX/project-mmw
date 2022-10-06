@@ -47,7 +47,7 @@ const Footer = () => {
 					</li>
 				</ul>
 
-				<span className="mx-4 md:mx-8">|</span>
+				{/* <span className="mx-4 md:mx-8">|</span>
 
 				<a
 					className="text-center text-xs md:text-base duration-500 hover:text-cyan-500"
@@ -56,7 +56,7 @@ const Footer = () => {
 					rel="noopener noreferrer"
 				>
 					Designed by pczerox
-				</a>
+				</a> */}
 			</div>
 
 			{/* <ul className="flex justify-center gap-4 text-center text-xs md:text-base">
