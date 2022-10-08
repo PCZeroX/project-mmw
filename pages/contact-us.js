@@ -13,7 +13,7 @@ const Contact = () => {
 					Contact Us
 				</h1>
 
-				<div className="mx-4 grid lg:grid-cols-2 gap-4">
+				<div className="mx-4 grid lg:grid-cols-2 gap-4 z-50">
 					<div className="space-y-6">
 						<h2 className="font-semibold text-xl">
 							How we work?
@@ -60,12 +60,12 @@ const Contact = () => {
 				</div>
 			</div>
 
-			<div className="absolute top-0 left-0 -z-10 opacity-20 w-full h-full">
+			<div className="fixed w-full min-h-screen -z-50 top-0 left-0 bottom-0 right-0">
 				<Image
 					src="/img/background/bg01.jpg"
 					alt="Background 01"
 					layout="fill"
-					className="object-cover object-center"
+					className="object-cover opacity-20"
 				/>
 			</div>
 		</>

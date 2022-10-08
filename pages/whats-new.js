@@ -33,11 +33,11 @@ const WhatsNew = () => {
 	return (
 		<div className="max-w-7xl mx-auto">
 			<Head>
-				<title>Metalmania - What's New</title>
+				<title>{`Metalmania - What's New`}</title>
 			</Head>
 
 			<h1 className="text-center font-bold text-4xl">
-				What's New
+				{`What's New`}
 			</h1>
 
 			<div className="absolute top-0 left-0 -z-10 opacity-20 w-full h-full">

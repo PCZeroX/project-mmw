@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
 	FaFacebookF,
 	FaInstagram,
@@ -23,6 +23,8 @@ const Header = () => {
 	const [visible, setVisible] = useState(true);
 	const [open, setOpen] = useState(false);
 
+	const effectRan = useRef(false);
+
 	const handleScrollY = () => {
 		const currentScrollPosY = window.scrollY;
 
@@ -42,10 +44,15 @@ const Header = () => {
 	};
 
 	useEffect(() => {
-		window.addEventListener("scroll", handleScrollY);
+		if (effectRan.current === true) {
+			window.addEventListener("scroll", handleScrollY);
+		}
 
-		return () =>
+		return () => {
+			effectRan.current = true;
+
 			window.removeEventListener("scroll", handleScrollY);
+		};
 	}, [prevScrollPosY, router.pathname]);
 
 	return (
@@ -63,7 +70,7 @@ const Header = () => {
 									: "bg-opacity-0 translate-y-0 drop-shadow-[0_0px_2px_rgba(255,255,255,0.5)]"
 						  }`
 						: `sticky top-0 col-span-4 duration-500 z-50 transition ${
-								prevScrollPosY > 64
+								prevScrollPosY > 0
 									? visible
 										? "translate-y-0 bg-gray-800 bg-opacity-100 drop-shadow-[0_0px_2px_rgba(255,255,255,0.5)]"
 										: "-translate-y-full"
