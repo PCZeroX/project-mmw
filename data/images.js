@@ -39,7 +39,7 @@ export const residentialImagesTwo = [
 		src: "/img/residential/09.jpg",
 	},
 	{
-		name: "residential 0",
+		name: "residential 10",
 		src: "/img/residential/10.jpg",
 	},
 ];

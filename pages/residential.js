@@ -1,7 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
+
+import Image from "next/image";
 
 import {
 	residentialImagesOne,
@@ -25,12 +26,12 @@ const Residential = () => {
 						"--swiper-pagination-color": "#fff",
 					}}
 					loop={true}
-					spaceBetween={16}
-					modules={[Pagination, Autoplay]}
 					pagination={{
 						clickable: true,
 					}}
+					modules={[Pagination, Autoplay]}
 					slidesPerView={1}
+					spaceBetween={16}
 					breakpoints={{
 						768: {
 							slidesPerView: 2,
