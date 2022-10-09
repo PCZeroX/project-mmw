@@ -1,76 +1,93 @@
 import Head from "next/head";
 import Image from "next/image";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper";
+
+import {
+	commercialImagesOne,
+	commercialImagesTwo,
+} from "../data/images";
+
 const Commercial = () => {
 	return (
-		<div className="max-w-7xl mx-auto">
+		<div className="max-w-7xl mx-auto py-8">
 			<Head>
 				<title>Metalmania - Commercial</title>
 			</Head>
 
-			<h1 className="text-center font-bold text-4xl">
-				Commercial
-			</h1>
+			<div className="mx-4 space-y-8">
+				<h1 className="text-center font-bold text-4xl">
+					Commercial
+				</h1>
 
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing
-				elit. Fugit pariatur minima beatae tempore doloribus
-				voluptates praesentium! Sapiente enim, alias
-				voluptatem eveniet repellendus temporibus expedita
-				sed, minima, veritatis possimus nam? Repellat!
-			</p>
+				<Swiper
+					style={{
+						"--swiper-pagination-color": "#fff",
+					}}
+					loop={true}
+					spaceBetween={16}
+					modules={[Pagination, Autoplay]}
+					pagination={{
+						clickable: true,
+					}}
+					slidesPerView={1}
+					breakpoints={{
+						768: {
+							slidesPerView: 2,
+						},
+					}}
+				>
+					{commercialImagesOne.map((image, index) => (
+						<SwiperSlide key={index}>
+							<Image
+								src={image.src}
+								alt={image.name}
+								width={1280}
+								height={720}
+								className="object-cover rounded-sm select-none"
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
 
-			<div className="flex">
-				<div className="relative w-96 h-80">
-					<Image
-						src="/img/background/bg02.jpg"
-						alt="background 02"
-						layout="fill"
-						className="object-cover object-center w-full h-full"
-					/>
-				</div>
-
-				<div className="relative w-96 h-80">
-					<Image
-						src="/img/background/bg02.jpg"
-						alt="background 02"
-						layout="fill"
-						className="object-cover object-center w-full h-full"
-					/>
-				</div>
-
-				<div className="relative w-96 h-80">
-					<Image
-						src="/img/background/bg02.jpg"
-						alt="background 02"
-						layout="fill"
-						className="object-cover object-center w-full h-full"
-					/>
-				</div>
-				<div className="relative w-96 h-80">
-					<Image
-						src="/img/background/bg02.jpg"
-						alt="background 02"
-						layout="fill"
-						className="object-cover object-center w-full h-full"
-					/>
-				</div>
-				<div className="relative w-96 h-80 flex-shrink-0">
-					<Image
-						src="/img/background/bg03.jpg"
-						alt="background 03"
-						layout="fill"
-						className="object-cover object-center w-full h-full"
-					/>
-				</div>
+				<Swiper
+					style={{
+						"--swiper-pagination-color": "#fff",
+					}}
+					loop={true}
+					spaceBetween={16}
+					modules={[Pagination, Autoplay]}
+					pagination={{
+						clickable: true,
+					}}
+					slidesPerView={1}
+					breakpoints={{
+						768: {
+							slidesPerView: 2,
+						},
+					}}
+				>
+					{commercialImagesTwo.map((image, index) => (
+						<SwiperSlide key={index}>
+							<Image
+								src={image.src}
+								alt={image.name}
+								width={1280}
+								height={720}
+								className="object-cover rounded-sm select-none"
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</div>
 
-			<div className="absolute top-0 left-0 -z-10 opacity-20 w-full h-full">
+			<div className="fixed w-full min-h-screen -z-50 top-0 left-0 bottom-0 right-0">
 				<Image
 					src="/img/background/bg04.jpg"
 					alt="Background 04"
 					layout="fill"
-					className="object-cover object-center"
+					className="object-cover opacity-20"
 				/>
 			</div>
 		</div>

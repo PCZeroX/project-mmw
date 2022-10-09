@@ -12,7 +12,6 @@ const NavLinks = [
 	{ name: "What's New", href: "/whats-new" },
 	{ name: "Residential", href: "/residential" },
 	{ name: "Commercial", href: "/commercial" },
-	{ name: "Architecture", href: "/architecture" },
 	{ name: "Contact Us", href: "/contact-us" },
 ];
 
@@ -59,7 +58,7 @@ const Header = () => {
 		<>
 			<header
 				className={`${
-					router.pathname === "/"
+					router?.pathname === "/"
 						? `fixed w-full col-span-4 top-0 left-0 z-50 duration-500 transition ${
 								prevScrollPosY
 									? visible

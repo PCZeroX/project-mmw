@@ -8,24 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Image from "next/image";
 
-const banners = [
-	{
-		name: "Banner 1",
-		src: "/img/banners/banner01.jpg",
-	},
-	{
-		name: "Banner 2",
-		src: "/img/banners/banner02.jpg",
-	},
-	{
-		name: "Banner 3",
-		src: "/img/banners/banner03.jpg",
-	},
-	{
-		name: "Banner 4",
-		src: "/img/banners/banner04.jpg",
-	},
-];
+import { bannerImages } from "../../data/images";
 
 const BannerSlider = () => {
 	return (
@@ -57,7 +40,7 @@ const BannerSlider = () => {
 				}}
 				modules={[EffectFade, Pagination, Autoplay]}
 			>
-				{banners.map((banner, index) => (
+				{bannerImages.map((banner, index) => (
 					<SwiperSlide key={index}>
 						<Image
 							src={banner.src}
